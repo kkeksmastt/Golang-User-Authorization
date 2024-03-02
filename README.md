@@ -52,7 +52,7 @@ Access, Refresh токены обоюдно связаны, Refresh операц
 1. Тестовый Guid, отправляем по POST localhost:8000/api/get-token:
 ```
 {
-    "guid":"7F9619FF-8B86-D011-B42D-00CF4FC964FF"
+    "guid":"8F9619FF-8B86-D011-B42D-00CF4FC964FF"
 }
 ```
 
