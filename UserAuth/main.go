@@ -4,8 +4,8 @@ import (
 	c "UserAuth/color"
 	db "UserAuth/database"
 	h "UserAuth/handlers"
+	sl "UserAuth/serverLog"
 	"fmt"
-	"log"
 	"net/http"
 	"os"
 
@@ -30,7 +30,6 @@ func main() {
 
 	db.InitDB()
 
-	port := os.Getenv("PORT")
 	if port == "" {
 		port = "8000"
 	}
