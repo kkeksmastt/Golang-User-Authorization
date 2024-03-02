@@ -21,8 +21,11 @@ func main() {
 	fmt.Println(c.Blue + "██║░░██║███████╗███████╗███████╗╚█████╔╝  ██║░╚═╝░██║███████╗██████╔╝╚█████╔╝██████╔╝██████╔╝" + c.Reset)
 	fmt.Println(c.Purple + "╚═╝░░╚═╝╚══════╝╚══════╝╚══════╝░╚════╝░  ╚═╝░░░░░╚═╝╚══════╝╚═════╝░░╚════╝░╚═════╝░╚═════╝░" + c.Reset)
 
+	port := ""
 	if err := godotenv.Load(".env"); err != nil {
-		log.Fatal("Error loading .env file")
+		sl.ErrorLog(err)
+	} else {
+		port = os.Getenv("PORT")
 	}
 
 	db.InitDB()
